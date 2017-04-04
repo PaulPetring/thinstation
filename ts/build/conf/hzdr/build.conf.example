@@ -83,11 +83,19 @@ package fonts-TTF-BH		# This one works nicely most of the time and is small.
 package fonts-TTF-vera		# Vera Sans package
 package dbus			# DBus Library package
 package ntfs-3g			# NTFS 3G FUSE based filesystem driver
+package messagebox		# MessageBox support
+package nfs			# NFS support
+package nscd			# nscd support
+package skype			# skype support
+package xfwm4			# xfwm4 support
+package thunar			# skype support
+package nss			# NSS support
+
 
 # Application packages (loadable afterwards)
 pkg firefox			# Firefox current Web Browser
 pkg ca-bundle			# Root Certificate Bundle
-pkg flash			# Flash Player Current Version
+#pkg flash			# Flash Player Current Version
 pkg openssh			# OpenSSH (with scp&co)
 pkg cups          		# cups printing system
 
@@ -97,10 +105,10 @@ param fb_comp_extra  "-comp xz -Xbcj x86 -Xdict-size 100%"
 param tsuser         tsuser             # Name of the user that thinstation will run as. Needs userauto package.
 param rootpasswd     pleasechangeme	# Do Change!  Console/telnet password for root
 param stripelf       yes		# Strip extraneous information from elf binaries (Maybe not Safe)
-param bootlogo       true		# Enable or Disable the use of the Boot splash.
+param bootlogo       false #true		# Enable or Disable the use of the Boot splash.
 param boottheme	     default           	# Backgound picture during boot
 param bootserver     149.220.10.30	# PXE Bootserver IP
-param splash	     silent		# fb splash mode
+#param splash	     silent		# fb splash mode
 param fbmtrr         3                  # MTRR value for uvesafb (default = 0, 4 is the best)
 param fbnocrtc       true               # This is usually a good thing.
 param fbsm           ywrap              # Window scrolling method (redraw, ypan, ywrap)
@@ -115,7 +123,7 @@ param haltonerror    false		# Will halt on error, default is true
 param hardlinkfs     true		# use hard links
 param sametimestmp   true               # When enabled, the timestamps for all files and folders will be set to 00:00
 param initrdcmd	     "lzma -9"		# Compression mode and level of initrd file. none, gzip -9, lzma -9 ,bzip2 -9
-param bootverbosity   0          	# Increased vebosity when booting TS
+param bootverbosity   5          	# Increased vebosity when booting TS
 param downloads      /downloads		# directory path for downloads
 param bootimages     "pxe"		# boot image mode (pxe, iso, etc.)
 param syslinuxtheme  "default"		# splash theme
